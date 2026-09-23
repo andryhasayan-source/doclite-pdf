@@ -46,6 +46,10 @@ Turn off your network and see for yourself.
 | **HTML → PDF** | Save a web page or your own markup as a document |
 | **Text recognition (OCR)** | Turn a scan or photo into a searchable PDF or a Word file |
 
+Recognition and conversion of large PDFs to Word run in the background: queue a
+file, close the window, get on with your work — a notification will offer to
+save the result when it is ready.
+
 ---
 
 ## What it looks like
@@ -102,7 +106,13 @@ An honest note on the limits, so there are no false expectations:
   the source document. Table borders are not reconstructed yet.
 - **OCR recognizes Russian and English** and filters out obvious junk
   (patterns, stamps, watermarks), but doesn't guarantee a perfect result on
-  badly damaged or very small scans.
+  badly damaged or very small scans. Documents with security patterns (forms,
+  passports) and photos of documents are out of its reach.
+- **If a PDF already has text, recognition is skipped** — the text is taken
+  from the document, which beats any recognition. In a mixed document only the
+  pages without text are recognized.
+- **Excel → PDF does not carry over pictures inside a sheet** (logos, stamps)
+  or headers and footers.
 
 ---
 
