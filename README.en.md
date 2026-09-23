@@ -4,8 +4,9 @@
 
 # DocLite PDF
 
-**Ten tools for working with PDF files, right inside your browser.
-Your documents are processed on your own computer and are never uploaded anywhere.**
+**Eleven tools for working with PDF files, right inside your browser,
+including text recognition (OCR). Your documents are processed on your own
+computer and are never uploaded anywhere.**
 
 [**Install from the Chrome Web Store**](https://chromewebstore.google.com/detail/doclite-pdf-%E2%80%94-10-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5/jdomnjidenomgdjpmnoegpfkjmhgfngn) · [Product website](https://www.shashevpro.ru/doclite/en/) · [Русский](README.md)
 
@@ -43,6 +44,7 @@ Turn off your network and see for yourself.
 | **Watermark** | Text or image, with adjustable tilt and opacity |
 | **Page numbers** | Any corner, starting from any number you like |
 | **HTML → PDF** | Save a web page or your own markup as a document |
+| **Text recognition (OCR)** | Turn a scan or photo into a searchable PDF or a Word file |
 
 ---
 
@@ -50,17 +52,13 @@ Turn off your network and see for yourself.
 
 <div align="center">
 
-| Merge | Split |
+| Merge | Watermark |
 |---|---|
-| <img src="screenshots/merge-en.png" width="380"> | <img src="screenshots/split-en.png" width="380"> |
+| <img src="screenshots/merge-en.png" width="380"> | <img src="screenshots/watermark-en.png" width="380"> |
 
-| Compress | Watermark |
+| Signature | Text recognition (OCR) |
 |---|---|
-| <img src="screenshots/compress-en.png" width="380"> | <img src="screenshots/watermark-en.png" width="380"> |
-
-| Signature | Pricing |
-|---|---|
-| <img src="screenshots/signature-en.png" width="380"> | <img src="screenshots/pro-en.png" width="380"> |
+| <img src="screenshots/signature-en.png" width="380"> | <img src="screenshots/ocr-en.png" width="380"> |
 
 </div>
 
@@ -68,7 +66,7 @@ Turn off your network and see for yourself.
 
 ## Pricing
 
-**Free** — three operations a day. Not "three tools out of ten", but any three:
+**Free** — three operations a day. Not "three tools out of eleven", but any three:
 everything is unlocked from the start, nothing is held behind a paywall. The
 counter resets daily, and a failed operation does not use up an attempt.
 
@@ -80,8 +78,10 @@ licence for one device.
 ## Privacy
 
 - Document contents never leave your computer and are shared with no one.
-- Exactly one network request is made: the licence check when you activate the
-  paid version.
+- Only two kinds of network request are ever made: the licence check when you
+  activate the paid version, and — once, only if you turn OCR on yourself —
+  downloading the OCR language models (about 4 MB per language; after that,
+  recognition runs offline).
 - No analytics, no telemetry, no advertising networks.
 - The extension does not request access to the content of the sites you visit.
 
@@ -97,9 +97,12 @@ An honest note on the limits, so there are no false expectations:
   selected. If the document has to stay editable text, use merge or split
   without compression.
 - **PDF → Word and PDF → Excel work with text-based PDFs, not with scans.**
-  The extension does not perform optical character recognition.
+  For scans and photos, use the separate text recognition (OCR) tool.
 - **Conversion preserves paragraphs and structure, but not the exact layout** of
   the source document. Table borders are not reconstructed yet.
+- **OCR recognizes Russian and English** and filters out obvious junk
+  (patterns, stamps, watermarks), but doesn't guarantee a perfect result on
+  badly damaged or very small scans.
 
 ---
 
