@@ -113,6 +113,8 @@ An honest note on the limits, so there are no false expectations:
   pages without text are recognized.
 - **Excel → PDF does not carry over pictures inside a sheet** (logos, stamps)
   or headers and footers.
+- **File size** — up to 300 MB per file and 600 MB in total when merging:
+  everything is processed in the browser's memory.
 
 ---
 

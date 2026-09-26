@@ -1,5 +1,34 @@
 # История версий · Changelog
 
+## 1.4.1 — укрепление
+
+- Защита от уязвимости pdf.js (CVE-2024-4367): при открытии PDF запрещено
+  исполнение кода из шрифтов
+  *Protection against a pdf.js vulnerability (CVE-2024-4367): code execution
+  from fonts is disabled when opening PDFs*
+- Библиотека Excel обновлена до SheetJS 0.20.3 — закрыты две уязвимости при
+  чтении специально собранных файлов (CVE-2023-30533, CVE-2024-22363)
+  *Excel library updated to SheetJS 0.20.3, closing two vulnerabilities in
+  reading crafted files (CVE-2023-30533, CVE-2024-22363)*
+- Страница печати не может отправлять данные в интернет: скрипты страницы в
+  HTML → PDF выполняются, картинки грузятся, но запросы наружу блокируются
+  *The print page cannot send data to the internet: scripts in HTML → PDF still
+  run and images still load, but outbound requests are blocked*
+- Понятный отказ вместо падения окна для слишком больших файлов: до 300 МБ на
+  файл и до 600 МБ суммарно для объединения
+  *A clear message instead of a crashed window for oversized files: up to
+  300 MB per file and 600 MB in total for merging*
+- PDF распознаётся и по расширению — файлы без типа (бывает на Windows) больше
+  не отсеиваются
+  *PDFs are also recognized by extension — files without a type (happens on
+  Windows) are no longer dropped*
+- Лицензия PRO действует только на той установке, для которой выдана
+  *A PRO license only works on the installation it was issued for*
+- Понятное сообщение при переполнении хранилища браузера; окно открывается на
+  вкладке последней фоновой задачи
+  *A clear message when browser storage is full; the window opens on the tab of
+  the latest background task*
+
 ## 1.4.0 — работа в фоне
 
 - Распознавание текста и конвертация больших PDF в Word теперь идут в фоне:
