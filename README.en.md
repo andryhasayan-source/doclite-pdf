@@ -4,11 +4,12 @@
 
 # DocLite PDF
 
-**Eleven tools for working with PDF files, right inside your browser,
-including text recognition (OCR). Your documents are processed on your own
-computer and are never uploaded anywhere.**
+**A document workspace right inside your browser: merge, compress, Word
+and Excel, signatures and stamps, PDF passwords, page editing and text
+recognition (OCR). Your documents are processed on your own computer and
+are never uploaded anywhere.**
 
-[**Install from the Chrome Web Store**](https://chromewebstore.google.com/detail/doclite-pdf-%E2%80%94-10-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5/jdomnjidenomgdjpmnoegpfkjmhgfngn) · [Product website](https://www.shashevpro.ru/doclite/en/) · [Русский](README.md)
+[**Install from the Chrome Web Store**](https://chromewebstore.google.com/detail/jdomnjidenomgdjpmnoegpfkjmhgfngn) · [Product website](https://www.shashevpro.ru/doclite/en/) · [Русский](README.md)
 
 </div>
 
@@ -34,21 +35,23 @@ Turn off your network and see for yourself.
 
 | | What it does |
 |---|---|
-| **Merge** | Several files into one document, in the order you choose |
+| **Merge** | Several files into one; set the order by dragging or with arrows |
 | **Split** | By page or by range, delivered as a single archive |
-| **Compress** | Brings the file size down so it fits an email limit |
-| **JPG → PDF** | Photos and scans collected into one document |
-| **PDF ↔ Word** | Text with its paragraphs, headings and numbered items preserved |
-| **PDF ↔ Excel** | Tables split into real columns, numbers stay numbers |
-| **Signature** | Place an image of your signature or stamp on the page |
-| **Watermark** | Text or image, with adjustable tilt and opacity |
-| **Page numbers** | Any corner, starting from any number you like |
+| **Compress** | Brings the size down for email; large files compress in the background |
+| **JPG → PDF** | Photos and scans into one document, in the order you choose |
+| **PDF ↔ Word** | Paragraphs, bordered tables, images and formatting stay in place |
+| **PDF ↔ Excel** | Tables with borders and merged cells; amounts and dates as real values |
+| **Signature & stamps** | Signature, stamp, a “True copy” certification — on one page or all |
+| **Watermark** | Text or image; several files at once |
+| **Page numbers** | Any corner, any starting number; several files at once |
 | **HTML → PDF** | Save a web page or your own markup as a document |
-| **Text recognition (OCR)** | Turn a scan or photo into a searchable PDF or a Word file |
+| **Pages** | Page thumbnails: reorder, rotate, delete |
+| **Password** | Add or remove a PDF password, AES-256 encryption |
+| **Recognize text (OCR)** | A scan or photo into a searchable PDF or Word; a precise mode too |
 
-Recognition and conversion of large PDFs to Word run in the background: queue a
-file, close the window, get on with your work — a notification will offer to
-save the result when it is ready.
+Recognition, conversion of large PDFs to Word and compression of large files
+run in the background: queue a file, close the window, get on with your work —
+a notification will offer to save the result when it is ready.
 
 ---
 
@@ -56,11 +59,11 @@ save the result when it is ready.
 
 <div align="center">
 
-| Merge | Watermark |
+| Merge | PDF password |
 |---|---|
-| <img src="screenshots/merge-en.png" width="380"> | <img src="screenshots/watermark-en.png" width="380"> |
+| <img src="screenshots/merge-en.png" width="380"> | <img src="screenshots/password-en.png" width="380"> |
 
-| Signature | Text recognition (OCR) |
+| Signature & stamps | Text recognition (OCR) |
 |---|---|
 | <img src="screenshots/signature-en.png" width="380"> | <img src="screenshots/ocr-en.png" width="380"> |
 
@@ -70,12 +73,16 @@ save the result when it is ready.
 
 ## Pricing
 
-**Free** — three operations a day. Not "three tools out of eleven", but any three:
+**Free** — three operations a day. Not "three tools out of the lot", but any three:
 everything is unlocked from the start, nothing is held behind a paywall. The
 counter resets daily, and a failed operation does not use up an attempt.
 
 **PRO — 300 RUB, paid once.** No subscription, no auto-renewal. A perpetual
-licence for one device.
+licence for one device. All tools, including new ones.
+
+<div align="center">
+<img src="screenshots/pro-en.png" width="380">
+</div>
 
 ---
 
@@ -84,8 +91,10 @@ licence for one device.
 - Document contents never leave your computer and are shared with no one.
 - Only two kinds of network request are ever made: the licence check when you
   activate the paid version, and — once, only if you turn OCR on yourself —
-  downloading the OCR language models (about 4 MB per language; after that,
-  recognition runs offline).
+  downloading the OCR language models (about 4 MB per language, about 15 MB
+  for precise mode; after that, recognition runs offline).
+- PDF passwords are added and removed on your own computer: the password is
+  never sent anywhere and never stored.
 - No analytics, no telemetry, no advertising networks.
 - The extension does not request access to the content of the sites you visit.
 
@@ -102,17 +111,22 @@ An honest note on the limits, so there are no false expectations:
   without compression.
 - **PDF → Word and PDF → Excel work with text-based PDFs, not with scans.**
   For scans and photos, use the separate text recognition (OCR) tool.
-- **Conversion preserves paragraphs and structure, but not the exact layout** of
-  the source document. Table borders are not reconstructed yet.
+- **Conversion keeps the layout close to the original, but not pixel for
+  pixel** — complex documents are worth a quick look.
 - **OCR recognizes Russian and English** and filters out obvious junk
   (patterns, stamps, watermarks), but doesn't guarantee a perfect result on
-  badly damaged or very small scans. Documents with security patterns (forms,
-  passports) and photos of documents are out of its reach.
+  badly damaged or very small scans. For small print and poor scans there is a
+  precise mode — about 2.5 times slower. Documents with security patterns
+  (forms, passports) are recognized only partly.
 - **If a PDF already has text, recognition is skipped** — the text is taken
   from the document, which beats any recognition. In a mixed document only the
   pages without text are recognized.
 - **Excel → PDF does not carry over pictures inside a sheet** (logos, stamps)
   or headers and footers.
+- **A password can only be removed if you know it.** A file that opens without
+  a password but has printing or editing restrictions can be freed of them
+  without one. Other tools do not process a protected file and suggest removing
+  the password first.
 - **File size** — up to 300 MB per file and 600 MB in total when merging:
   everything is processed in the browser's memory.
 

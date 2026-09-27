@@ -1,5 +1,58 @@
 # История версий · Changelog
 
+## 1.5.0 — рабочий центр документов
+
+- Новое название: «DocLite PDF — рабочий центр документов» — число
+  инструментов больше не пишем, их становится больше
+  *New name: “DocLite PDF — Document Workspace”; we no longer put a tool
+  count in the name, as the number keeps growing*
+- Новый инструмент «Страницы»: миниатюры страниц — переставить, повернуть,
+  удалить мышкой; большие документы открываются быстро
+  *New tool, Pages: page thumbnails — reorder, rotate and delete with the
+  mouse; large documents open quickly*
+- Новый инструмент «Пароль»: поставить или снять пароль на PDF, шифрование
+  AES-256 на вашем компьютере. Файл, который открывается без пароля, но
+  с ограничениями на печать или изменение, освобождается от них без пароля
+  *New tool, Password: add or remove a PDF password, AES-256 encryption on
+  your computer. A file that opens without a password but has printing or
+  editing restrictions can be freed of them without one*
+- Подпись: печати и штамп «Копия верна» с должностью, фамилией и датой,
+  несколько отметок на листе, «на все страницы»
+  *Signature: stamps and a “True copy” certification with position, name and
+  date, several marks per page, “apply to all pages”*
+- Порядок документов при объединении и картинок в JPG → PDF: перетаскивание,
+  стрелки, номера
+  *Document order in Merge and image order in JPG → PDF: drag and drop,
+  arrows, numbers*
+- Точное распознавание текста для мелкого шрифта и плохих сканов (модели
+  ~15 МБ на язык, примерно в 2,5 раза медленнее)
+  *Precise text recognition for small print and poor scans (models ~15 MB
+  per language, about 2.5 times slower)*
+- Распознавание в PDF и в Word с расположением читает подготовленную копию
+  страницы, а в документ кладёт цветной оригинал: на паспортах и бланках
+  текста находится заметно больше, печати остаются цветными
+  *Recognition to PDF and to Word with layout reads a prepared copy of the
+  page but keeps the colour original in the document: noticeably more text on
+  passports and forms, stamps stay in colour*
+- Большие файлы (от 8 МБ или 40 страниц) сжимаются в фоне
+  *Large files (8 MB or 40 pages and up) are compressed in the background*
+- Водяной знак и нумерация сразу на несколько файлов — результат одним архивом
+  *Watermark and page numbers for several files at once — one archive back*
+- Защищённый PDF больше не даёт непонятную ошибку или битый файл: все
+  инструменты говорят, что файл защищён, и подсказывают вкладку «Пароль»;
+  операция не списывается
+  *A protected PDF no longer produces an obscure error or a broken file: every
+  tool says the file is protected and points to the Password tab; no
+  operation is charged*
+- Исправлено: пароли, начинающиеся с «-» или «@», не ставились
+  *Fixed: passwords starting with “-” or “@” could not be set*
+- Исправлено: при быстрой смене файла во вкладке «Страницы» порядок страниц
+  мог примениться не к тому файлу
+  *Fixed: switching files quickly on the Pages tab could apply the page order
+  to the wrong file*
+- Меньше расход памяти при сжатии и подписи больших документов
+  *Lower memory use when compressing and signing large documents*
+
 ## 1.4.1 — укрепление
 
 - Защита от уязвимости pdf.js (CVE-2024-4367): при открытии PDF запрещено
